@@ -5,15 +5,17 @@
     "customizations": {
         "vscode": {
             "extensions": [
-				"ms-vscode.cpptools",
-				"ajshort.msg",
-				"twxs.cmake",
-				"redhat.vscode-xml",
-				"actboy168.tasks",
-				"brpaz.file-templates",
-				"ms-iot.vscode-ros",
-				"ms-python.python"
-			]
+                "ms-vscode.cpptools",
+                "ajshort.msg",
+                "twxs.cmake",
+                "redhat.vscode-xml",
+                "actboy168.tasks",
+                "brpaz.file-templates",
+                "ms-iot.vscode-ros",
+                "jeff-hykin.better-cpp-syntax",
+                "cschlosser.doxdocgen",
+                "ms-vscode.cmake-tools"
+            ]
         }
     },
     // "forwardPorts": [
