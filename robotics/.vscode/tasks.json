@@ -6,7 +6,7 @@
         {
             "label": "build",
             "type": "shell",
-            "command": "colcon build",
+            "command": "colcon build --cmake-args -DCMAKE_TOOLCHAIN_FILE=/vcpkg/scripts/buildsystems/vcpkg.cmake",
             "group": {
                 "kind": "build",
                 "isDefault": true
