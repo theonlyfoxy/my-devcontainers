@@ -38,4 +38,7 @@
             "pattern": "**/*.world"
         }
     ],
+    "cmake.configureSettings": {
+        "CMAKE_TOOLCHAIN_FILE": "/vcpkg/scripts/buildsystems/vcpkg.cmake"
+    },
 }
