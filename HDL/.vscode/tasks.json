@@ -1,0 +1,23 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Logisim",
+            "type": "shell",
+            "command": "java -jar /Logisim/Evolution/logisim-evolution.jar",
+            "presentation": {
+                "reveal": "always",
+                "panel": "new"
+            }
+        },
+        {
+            "label": "Digital",
+            "type": "shell",
+            "command": "java -jar /Logisim/Digital/Digital.jar",
+            "presentation": {
+                "reveal": "always",
+                "panel": "new"
+            }
+        }
+    ]
+}

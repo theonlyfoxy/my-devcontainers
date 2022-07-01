@@ -1,0 +1,31 @@
+{
+    "build": {
+        "dockerfile": "Dockerfile"
+    },
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "actboy168.tasks",
+                "yuyichao.digitaljs",
+                "mshr-h.veriloghdl"
+            ]
+        }
+    },
+    // "forwardPorts": [
+    //     3000
+    // ],
+    "initializeCommand": ".devcontainer/scripts/x11auth.sh",
+    "mounts": [
+        "source=/tmp/.X11-unix,target=/tmp/.X11-unix,type=bind",
+        "source=/tmp/.docker.xauth,target=/tmp/.docker.xauth,type=bind"
+    ],
+    "containerEnv": {
+        "DISPLAY": "${localEnv:DISPLAY}",
+        "QT_X11_NO_MITSHM": "1",
+        "XAUTHORITY": "/tmp/.docker.xauth"
+    },
+    "runArgs": [
+        "--gpus",
+        "all"
+    ]
+}
