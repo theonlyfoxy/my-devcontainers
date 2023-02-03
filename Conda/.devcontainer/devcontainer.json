@@ -5,11 +5,7 @@
     "customizations": {
         "vscode": {
             "extensions": [
-                "ms-vscode.cpptools",
-                "jeff-hykin.better-cpp-syntax",
-                "platformio.platformio-ide"
-                //"ms-vscode.vscode-embedded-tools",
-                //"microhobby.linuxkerneldev",
+                "ms-python.python"
             ]
         }
     },
@@ -17,6 +13,9 @@
     //     3000
     // ],
     "initializeCommand": ".devcontainer/scripts/x11auth.sh",
+    // Use 'postCreateCommand' to run commands after the container is created.
+    // e.g conda env create -f environment.yml *OR* pip install -r requirements.txt
+    // "postCreateCommand": "",
     "mounts": [
         "source=/tmp/.X11-unix,target=/tmp/.X11-unix,type=bind",
         "source=/tmp/.docker.xauth,target=/tmp/.docker.xauth,type=bind",
@@ -28,7 +27,6 @@
         "XAUTHORITY": "/tmp/.docker.xauth"
     },
     "runArgs": [
-        "--device-cgroup-rule=c 188:* rmw",
         "--gpus",
         "all"
     ]
