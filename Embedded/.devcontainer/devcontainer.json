@@ -16,6 +16,7 @@
     // "forwardPorts": [
     //     3000
     // ],
+    // At the moment, Only X11 Supported.
     "initializeCommand": "flatpak-spawn --host .devcontainer/scripts/x11auth.sh",
     "mounts": [
         "source=/tmp/.X11-unix,target=/tmp/.X11-unix,type=bind",
