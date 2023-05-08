@@ -20,6 +20,8 @@
     "mounts": [
         "source=/tmp/.X11-unix,target=/tmp/.X11-unix,type=bind",
         "source=/tmp/.docker.xauth,target=/tmp/.docker.xauth,type=bind",
+        // Also Make Sure to create udev rules...
+        // https://blog.christophersmart.com/2020/04/18/accessing-usb-serial-devices-in-fedora-silverblue/
         "source=/dev,target=/dev,type=bind"
     ],
     "containerEnv": {
