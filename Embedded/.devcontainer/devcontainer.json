@@ -16,7 +16,7 @@
     // "forwardPorts": [
     //     3000
     // ],
-    "initializeCommand": ".devcontainer/scripts/x11auth.sh",
+    "initializeCommand": "flatpak-spawn --host .devcontainer/scripts/x11auth.sh",
     "mounts": [
         "source=/tmp/.X11-unix,target=/tmp/.X11-unix,type=bind",
         "source=/tmp/.docker.xauth,target=/tmp/.docker.xauth,type=bind",
@@ -28,6 +28,7 @@
         "XAUTHORITY": "/tmp/.docker.xauth"
     },
     "runArgs": [
+        "--privileged",
         "--device-cgroup-rule=c 188:* rmw",
         "--gpus",
         "all"
