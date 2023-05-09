@@ -13,10 +13,11 @@
             ]
         }
     },
-    // "forwardPorts": [
-    //     3000
-    // ],
-    // At the moment, Only X11 Supported.
+    "forwardPorts": [
+        6080,
+        5901
+    ],
+    // At the moment, Only X11 Supported. You can use VNC as alternative.
     "initializeCommand": "flatpak-spawn --host .devcontainer/scripts/x11auth.sh",
     "mounts": [
         "source=/tmp/.X11-unix,target=/tmp/.X11-unix,type=bind",
@@ -36,5 +37,14 @@
         "--device-cgroup-rule=c 188:* rmw",
         "--gpus",
         "all"
-    ]
+    ],
+    "features": {
+        "ghcr.io/devcontainers/features/desktop-lite:1": {
+            //"version": "latest",
+            //"noVncVersion": "1.2.0",
+            "password": "vscode",
+            "webPort": "6080",
+            "vncPort": "5901"
+        }
+    }
 }
