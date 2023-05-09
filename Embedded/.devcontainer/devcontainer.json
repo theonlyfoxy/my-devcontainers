@@ -32,7 +32,7 @@
     },
     "runArgs": [
         // SELinux Workaround
-        "--privileged",
+        //"--privileged",
         "--device-cgroup-rule=c 188:* rmw",
         "--gpus",
         "all"
